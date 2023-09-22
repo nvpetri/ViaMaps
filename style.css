@@ -35,11 +35,29 @@ h3{
 .input{
     padding-top: 50px;
     padding-left: 10px;
+    display: grid;
 }
 
 .cep{
     border-radius: 20px;
     height: 40px;
-    
+    width:  400px;
+    box-shadow: 0px 4px 8px #0005;
+    border: 0 none;
 }
 
+.cep::placeholder{
+    color: black;
+    padding-left: 15px;
+    font-size: 18px;
+}
+
+.buscar{
+    background-color: #007bff;
+    width: 100px;
+    border-radius: 15px;
+    border: 0 none;
+    box-shadow: 0px 4px 8px #0005;
+    color: white;
+    font-size: 18px;
+}
