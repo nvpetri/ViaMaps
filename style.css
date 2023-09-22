@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo{
+    width: 100px;
+    margin: 10px;
+}
+
+body{
+    background-color: #e6e6fa;
+    display: flex;
+}
+
+h1{
+    font-family: 'Montserrat', sans-serif;
+    color: #007bff;
+    font-size: 100px;
+}
+
+h3{
+    font-family: 'Noto Sans', sans-serif;
+    color: #007bff;
+    font-size: 30px;
+    padding-top: 12px;
+    padding-left: 10px;
+}
+
+.azul{
+    padding-top: 100px;
+}
+
+.input{
+    padding-top: 50px;
+    padding-left: 10px;
+}
+
+.cep{
+    border-radius: 20px;
+    height: 40px;
+    
+}
+
