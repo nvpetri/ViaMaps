@@ -1,27 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans:wght@300&display=swap"rel="stylesheet">
+    <script src="app.js" defer></script>
     <link rel="stylesheet" href="./style.css">
     <title>ViaMaps</title>
 </head>
+
 <body>
     <header>
         <img src="./img/logo.svg" alt="Logo ViaMaps" class="logo">
     </header>
     <main>
-        <div class="azul">
-            <h1>ViaMaps</h1>
-            <h3>Insira um CEP para a busca</h3>
+        <div class="display">
+            <div class="azul">
+                <h1>ViaMaps</h1>
+                <h3>Insira um CEP para a busca</h3>
+            </div>
+            <div class="input">
+                <input type="text" class="cep" id="cep" placeholder="Insira o CEP aqui:">
+                <button class="buscar" id="buscar">BUSCAR</button>
+            </div>
+            <div class="infos">
+                <input type="text" id="rua" disabled>
+            </div>
+            <div class="infos">
+                <input type="text" id="cidade" disabled>
+            </div>
+            <div class="infos">
+                <input type="text" id="estado" disabled>
+            </div>
         </div>
-        <div class="input">
-            <input type="text" class="cep" placeholder="Insira o CEP aqui:">
-            <button class="buscar">BUSCAR</button>
+        <div class="maps">
+            <iframe width="1200" height="800" style="border: 10px; border-radius: 50px;" loading="lazy" allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAeVRmm_pxeTiNMChEeLFAJxC8nR-X6Mj4&q=Plaza+Shopping+Carapicuíba,Carapicuíba+SP">
+        </iframe>
         </div>
     </main>
 </body>
+
 </html>
