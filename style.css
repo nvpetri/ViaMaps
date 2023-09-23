@@ -98,3 +98,30 @@ input{
     padding-top: 80px;
     padding-left: 90px;
 }
+
+@media (max-width: 768px) {
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+    .display{
+        gap: 12px;
+        padding-left: 80px;
+        width: 600px;
+    }
+    iframe{
+        width: 500px;
+        height: 325px;
+    }
+    .azul{
+        padding-top: 10px;
+    }
+    .maps{
+        padding-left: 40px;
+        padding-top: 40px;
+    }
+}
