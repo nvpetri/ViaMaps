@@ -6,6 +6,8 @@
 ### Tópicos
 - [Descrição do projeto](#descrição-do-projeto)
 - [Funcionalidades](#funcionalidades)
+- [Como funciona?](#como-funciona)
+- [Limitações:](#limitações)
 - [Aplicação Desktop](#aplicação-desktop)
 - [Aplicação Responsiva](#aplicação-responsiva)
 - [Ferramentas Utilizadas](#ferramentas-utilizadas)
@@ -19,6 +21,12 @@
 <p><strong>Funcionalidade 1:</strong> Permitir que o usuário digite o CEP para realizar a busca </p>
 <p><strong>Funcionalidade 2:</strong> Mostrar as informações acerca do CEP inserido</p>
 <p><strong>Funcionalidade 3:</strong> Mostrar a localização no Mapa</p>
+
+## Como funciona?
+<p>O usuário insere o CEP que deseja descobrir e utilizando a <strong>API ViaCep</strong> obtemos os dados referentes ao Logradouro, Cidade e Estado, esses dados são incorporados ao link da <strong>API GoogleMaps Geocoder Embed</strong> que nos retorna a localização exata, podendo redirecionar ao Google Maps e obter uma rota para o endereço além de informações mais detalhadas sobre o local.</p>
+
+## Limitações:
+<p> O ViaMaps só é capaz de localizar endereços no Brasil pois utiliza uma API especifica para os códigos postais brasileiros, então não será possível obter localizações de outros países.</p>
 
 ## Aplicação Desktop
 
