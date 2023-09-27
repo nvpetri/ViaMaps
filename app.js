@@ -2,6 +2,8 @@
 
 const cepInput = document.getElementById('cep')
 const buscar = document.getElementById('buscar')
+const toggleButton = document.getElementById('toggleButton')
+const status = document.getElementById('status')
 
 async function pegarEndereco(cep) {
     const url = `https://viacep.com.br/ws/${cep}/json/`
@@ -37,13 +39,10 @@ async function mudarLocalizacao() {
 buscar.addEventListener('click', preencherCampos)
 buscar.addEventListener('click', mudarLocalizacao)
 
-const toggleButton = document.getElementById("toggleButton");
-const status = document.getElementById("status");
-
 toggleButton.addEventListener("change", function () {
   if (toggleButton.checked) {
-    status.textContent = "ON";
+    status.textContent = "CLIMA"
   } else {
-    status.textContent = "MAPS";
+    status.textContent = "MAPS"
   }
-});
+})
