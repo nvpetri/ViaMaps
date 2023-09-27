@@ -2,8 +2,6 @@
 
 const cepInput = document.getElementById('cep')
 const buscar = document.getElementById('buscar')
-const toggleButton = document.getElementById('toggleButton')
-const status = document.getElementById('status')
 
 async function pegarEndereco(cep) {
     const url = `https://viacep.com.br/ws/${cep}/json/`
@@ -34,15 +32,7 @@ async function mudarLocalizacao() {
     const estado = cepInfo.uf
 
     const localizacao = document.getElementById('iframe').src = "https://www.google.com/maps/embed/v1/place?key=AIzaSyAeVRmm_pxeTiNMChEeLFAJxC8nR-X6Mj4&q=" + rua + "," + cidade + "+" + estado
-    console.log(localizacao)
 }
+
 buscar.addEventListener('click', preencherCampos)
 buscar.addEventListener('click', mudarLocalizacao)
-
-toggleButton.addEventListener("change", function () {
-  if (toggleButton.checked) {
-    status.textContent = "CLIMA"
-  } else {
-    status.textContent = "MAPS"
-  }
-})
