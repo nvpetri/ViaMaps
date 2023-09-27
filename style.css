@@ -125,3 +125,45 @@ input{
         padding-top: 40px;
     }
 }
+
+#escolhaOpcao {
+    display: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  #confirmarOpcao {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  #confirmarOpcao:hover {
+    background-color: #0056b3;
+  }
+  
+  #confirmarOpcao {
+    margin: 0 auto;
+    display: block;
+  }

@@ -2,12 +2,14 @@
 
 const cepInput = document.getElementById('cep')
 const buscar = document.getElementById('buscar')
+const enderecoButton = document.getElementById('mostrarEndereco')
+const climaButton = document.getElementById('mostrarClima')
+const escolhaOpcao = document.getElementById('escolhaOpcao')
 
 async function pegarEndereco(cep) {
     const url = `https://viacep.com.br/ws/${cep}/json/`
     const response = await fetch(url)
     const endereco = await response.json()
-    console.log(url)
     return endereco
 }
 
@@ -31,8 +33,34 @@ async function mudarLocalizacao() {
     const cidade = cepInfo.localidade
     const estado = cepInfo.uf
 
-    const localizacao = document.getElementById('iframe').src = "https://www.google.com/maps/embed/v1/place?key=AIzaSyAeVRmm_pxeTiNMChEeLFAJxC8nR-X6Mj4&q=" + rua + "," + cidade + "+" + estado
+    if (enderecoButton.checked) {
+        const localizacao = document.getElementById('iframe').src = "https://www.google.com/maps/embed/v1/place?key=AIzaSyAeVRmm_pxeTiNMChEeLFAJxC8nR-X6Mj4&q=" + rua + "," + cidade + "+" + estado
+    } else {
+        document.getElementById('iframe').src = ""
+    }
 }
 
-buscar.addEventListener('click', preencherCampos)
-buscar.addEventListener('click', mudarLocalizacao)
+async function mostrarClima(){
+    const cidade = document.getElementById('cidade').value
+    const estado = document.getElementById('estado').value
+}
+
+buscar.addEventListener('click', function () {
+    const mostrarEndereco = enderecoButton.checked;
+    const mostrarClima = climaButton.checked;
+
+    escolhaOpcao.style.display = 'block';
+
+    document.getElementById('confirmarOpcao').addEventListener('click', function () {
+        if (mostrarEndereco) {
+            mudarLocalizacao()
+            preencherCampos()
+        }
+
+        if (mostrarClima) {
+            mostrarInformacoesClima()
+        }
+
+        escolhaOpcao.style.display = 'none'
+    })
+})

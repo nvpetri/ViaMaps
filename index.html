@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="./style.css">
     <title>ViaMaps</title>
 </head>
-
 <body>
     <header>
         <img src="./img/logo.svg" alt="Logo ViaMaps" class="logo">
@@ -35,6 +34,16 @@
             <div class="infos">
                 <input type="text" id="estado" disabled>
             </div>
+            <div id="escolhaOpcao">
+                <p>Escolha o que deseja ver:</p>
+                <label for="mostrarEndereco">
+                  <input type="checkbox" id="mostrarEndereco"> Mostrar Endereço no Mapa
+                </label>
+                <label for="mostrarClima">
+                  <input type="checkbox" id="mostrarClima"> Mostrar Clima
+                </label>
+                <button id="confirmarOpcao">Confirmar</button>
+              </div>
         </div>
         <div class="maps">
             <iframe id="iframe" width="1200" height="800" style="border: 10px; border-radius: 50px;" loading="lazy" allowfullscreen
@@ -43,5 +52,4 @@
         </div>
     </main>
 </body>
-
 </html>
