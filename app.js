@@ -16,13 +16,16 @@ async function pegarEndereco(cep) {
 async function obterClima(){
     const cepInfo = await pegarEndereco(cepInput.value)
 
-    const rua = cepInfo.logradouro
     const cidade = cepInfo.localidade
     const estado = cepInfo.uf
 
     const url = `https://api.hgbrasil.com/weather?key=09065ba6&city_name=${cidade},${estado}`
     const response = await fetch(url)
-    const temperatura = await response.json()
+    const clima = await response.json()
+
+    
+
+    console.log(temperatura)
 }
 
 async function preencherCampos() {
