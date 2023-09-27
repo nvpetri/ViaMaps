@@ -36,3 +36,14 @@ async function mudarLocalizacao() {
 }
 buscar.addEventListener('click', preencherCampos)
 buscar.addEventListener('click', mudarLocalizacao)
+
+const toggleButton = document.getElementById("toggleButton");
+const status = document.getElementById("status");
+
+toggleButton.addEventListener("change", function () {
+  if (toggleButton.checked) {
+    status.textContent = "ON";
+  } else {
+    status.textContent = "MAPS";
+  }
+});

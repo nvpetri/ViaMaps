@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta content="" name="description">
+
+    <title>HG Weather JS</title>
+
+    <script src="https://assets.hgbrasil.com/weather/js/hg-weather-1.0.js" type="text/javascript"></script>
+
+    <!--
+      Biblioteca JS para uso da api HG Weather
+      Veja mais informações em https://hgbrasil.com/weather
+
+      Para criar uma chave gratuita, entre em https://console.hgbrasil.com/keys
+      Copyrights HG Brasil 2018
+    -->
+
+    <style type="text/css" media="screen">
+      body { font-family: Arial; }
+      .hg-weather { border-radius: 3px; padding: 15px; display: inline-block; }
+
+      .hg-weather.clear_day { background-color: #217CAF; color: white; }
+      .hg-weather.clear_night { background-color: #555; color: white; }
+      .hg-weather.cloudly_day, .hg-weather.fog, .hg-weather.rain, .hg-weather.storm { background-color: #ddd; }
+      .hg-weather.cloudly_night { background-color: #444; color: white; }
+    </style>
+  </head>
+  <body>
+    <h1>HG Weather</h1>
+
+    <div class="hg-weather" data-key="development" data-woeid="455827">
+      <span data-weather="message">Obtendo...<br></span>
+
+      <span data-weather="city">Obtendo cidade</span> <span data-weather="temp">00</span>º C<br>
+      <span data-weather="description">Obtendo tempo...</span><br>
+      Nascer do Sol: <span data-weather="sunrise">00:00</span> - Pôr do Sol: <span data-weather="sunset">00:00</span><br>
+      Velocidade do vento: <span data-weather="wind_speedy">-- km/h</span><br>
+      <img src="http://assets.api.hgbrasil.com/weather/images/44.png" data-weather="image"><br>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        HGWeather.initialize();
+      });
+    </script>
+  </body>
+</html>
