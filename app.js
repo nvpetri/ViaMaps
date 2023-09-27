@@ -13,6 +13,18 @@ async function pegarEndereco(cep) {
     return endereco
 }
 
+async function obterClima(){
+    const cepInfo = await pegarEndereco(cepInput.value)
+
+    const rua = cepInfo.logradouro
+    const cidade = cepInfo.localidade
+    const estado = cepInfo.uf
+
+    const url = `https://api.hgbrasil.com/weather?key=09065ba6&city_name=${cidade},${estado}`
+    const response = await fetch(url)
+    const temperatura = await response.json()
+}
+
 async function preencherCampos() {
     const rua = document.getElementById('rua')
     const cidade = document.getElementById('cidade')
@@ -58,7 +70,7 @@ buscar.addEventListener('click', function () {
         }
 
         if (mostrarClima) {
-            mostrarInformacoesClima()
+            obterClima()
         }
 
         escolhaOpcao.style.display = 'none'
