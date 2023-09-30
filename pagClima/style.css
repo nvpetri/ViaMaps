@@ -1,0 +1,133 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo {
+    width: 100px;
+    margin: 10px;
+}
+
+body {
+    background-color: #e6e6fa;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.display {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    place-items: center;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: #007bff;
+    font-size: 100px;
+}
+
+h3 {
+    font-family: 'Noto Sans', sans-serif;
+    color: #007bff;
+    font-size: 30px;
+    padding-top: 12px;
+    padding-left: 10px;
+}
+
+.azul {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.buscar {
+    background-color: #007bff;
+    width: 150px;
+    height: 80px;
+    border-radius: 15px;
+    border: 0 none;
+    box-shadow: 0px 4px 8px #0005;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.buscar:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+    background-color: #008fff;
+    color: wheat;
+}
+
+#cityInput {
+    border-radius: 20px;
+    height: 60px;
+    width: 400px;
+    box-shadow: 0px 4px 8px #0005;
+    border: 0 none;
+    background-color: white;
+    font-size: 20px;
+}
+
+::placeholder {
+    text-align: center;
+    font-size: 18px;
+}
+
+#weatherInfo {
+    width: 400px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: #007bff;
+    color: #e6e6fa;
+}
+
+@media (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+    .display {
+        gap: 12px;
+        padding-left: -80px;
+        width: 100px;
+    }
+    .azul {
+        padding-top: 10px;
+    }
+    h1 {
+        font-size: 70px;
+    }
+    .input {
+        display: flex;
+        flex-direction: column;
+    }
+    #cityInput {
+        width: 300px;
+    }
+}
