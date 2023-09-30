@@ -64,7 +64,7 @@ h3 {
 .buscar {
     background-color: #007bff;
     width: 150px;
-    height: 80px;
+    height: 100px;
     border-radius: 15px;
     border: 0 none;
     box-shadow: 0px 4px 8px #0005;
@@ -88,6 +88,7 @@ h3 {
     border: 0 none;
     background-color: white;
     font-size: 20px;
+    padding: 16px;
 }
 
 ::placeholder {
@@ -95,12 +96,23 @@ h3 {
     font-size: 18px;
 }
 
-#weatherInfo {
+#weatherInfoo {
     width: 400px;
     height: 100px;
     border-radius: 20px;
     background-color: #007bff;
+    display: flex;
+}
+
+#weatherInfo {
+    width: 270px;
     color: #e6e6fa;
+    font-size: 26px;
+    padding: 12px;
+}
+
+#img {
+    width: 90px;
 }
 
 @media (max-width: 768px) {
