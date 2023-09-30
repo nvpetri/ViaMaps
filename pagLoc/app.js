@@ -3,6 +3,7 @@
 const cepInput = document.getElementById('cep')
 const buscar = document.getElementById('buscar')
 
+
 async function pegarEndereco(cep) {
     const url = `https://viacep.com.br/ws/${cep}/json/`
     const response = await fetch(url)
@@ -12,6 +13,7 @@ async function pegarEndereco(cep) {
 }
 
 async function preencherCampos() {
+
     const rua = document.getElementById('rua')
     const cidade = document.getElementById('cidade')
     const estado = document.getElementById('estado')
@@ -21,6 +23,7 @@ async function preencherCampos() {
     rua.value = cepInfo.logradouro
     cidade.value = cepInfo.localidade
     estado.value = cepInfo.uf
+
 }
 
 async function mudarLocalizacao() {
@@ -33,6 +36,8 @@ async function mudarLocalizacao() {
 
     const localizacao = document.getElementById('iframe').src = "https://www.google.com/maps/embed/v1/place?key=AIzaSyAeVRmm_pxeTiNMChEeLFAJxC8nR-X6Mj4&q=" + rua + "," + cidade + "+" + estado
     console.log(localizacao)
+
 }
+
 buscar.addEventListener('click', preencherCampos)
 buscar.addEventListener('click', mudarLocalizacao)

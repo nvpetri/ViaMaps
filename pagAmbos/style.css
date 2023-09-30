@@ -1,10 +1,4 @@
 * {
-    padding: 0;
-    box-sizing: border-box;
-    margin: 0;
-}
-
-* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -17,19 +11,17 @@
 
 body {
     background-color: #e6e6fa;
+    display: flex;
 }
 
 main {
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .display {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    place-items: center;
 }
 
 h1 {
@@ -48,23 +40,36 @@ h3 {
 
 .azul {
     padding-top: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .input {
     height: 100px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 12px;
+}
+
+.cep,
+#rua,
+#cidade,
+#estado {
+    border-radius: 20px;
+    height: 40px;
+    width: 400px;
+    box-shadow: 0px 4px 8px #0005;
+    border: 0 none;
+    background-color: white;
+}
+
+.cep::placeholder {
+    padding-left: 15px;
+    font-size: 18px;
 }
 
 .buscar {
     background-color: #007bff;
-    width: 150px;
-    height: 100px;
+    width: 100px;
+    height: 40px;
     border-radius: 15px;
     border: 0 none;
     box-shadow: 0px 4px 8px #0005;
@@ -80,20 +85,21 @@ h3 {
     color: wheat;
 }
 
-#cityInput {
-    border-radius: 20px;
-    height: 60px;
-    width: 400px;
-    box-shadow: 0px 4px 8px #0005;
-    border: 0 none;
-    background-color: white;
-    font-size: 20px;
-    padding: 16px;
+.infos {
+    height: 50px;
+    display: flex;
+    flex-direction: column;
 }
 
-::placeholder {
-    text-align: center;
+input {
+    color: black;
+    padding-left: 15px;
     font-size: 18px;
+}
+
+.maps {
+    padding-top: 80px;
+    padding-left: 90px;
 }
 
 #weatherInfoo {
@@ -126,24 +132,18 @@ h3 {
     }
     .display {
         gap: 12px;
-        padding-left: -80px;
-        width: 100px;
+        padding-left: 80px;
+        width: 600px;
+    }
+    iframe {
+        width: 500px;
+        height: 325px;
     }
     .azul {
         padding-top: 10px;
     }
-    h1 {
-        font-size: 70px;
-    }
-    .input {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 10px;
-    }
-    #cityInput {
-        width: 300px;
-    }
-    #weatherInfoo {
-        width: 320px;
+    .maps {
+        padding-left: 40px;
+        padding-top: 40px;
     }
 }
