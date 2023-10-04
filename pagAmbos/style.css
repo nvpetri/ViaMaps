@@ -132,12 +132,12 @@ input {
     }
     .display {
         gap: 12px;
-        padding-left: 80px;
+        padding-left: 40px;
         width: 600px;
     }
     iframe {
-        width: 500px;
-        height: 325px;
+        width: 400px;
+        height: 240px;
     }
     .azul {
         padding-top: 10px;
@@ -145,5 +145,11 @@ input {
     .maps {
         padding-left: 40px;
         padding-top: 40px;
+    }
+    h1 {
+        font-size: 80px;
+    }
+    h3 {
+        font-size: 20px;
     }
 }

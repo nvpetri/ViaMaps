@@ -1,36 +1,36 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.logo{
+.logo {
     width: 100px;
     margin: 10px;
 }
 
-body{
+body {
     background-color: #e6e6fa;
     display: flex;
 }
 
-main{
+main {
     display: flex;
 }
 
-.display{
+.display {
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
 
-h1{
+h1 {
     font-family: 'Montserrat', sans-serif;
     color: #007bff;
     font-size: 100px;
 }
 
-h3{
+h3 {
     font-family: 'Noto Sans', sans-serif;
     color: #007bff;
     font-size: 30px;
@@ -38,32 +38,35 @@ h3{
     padding-left: 10px;
 }
 
-.azul{
+.azul {
     padding-top: 100px;
 }
 
-.input{
+.input {
     height: 100px;
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-.cep, #rua, #cidade, #estado{
+.cep,
+#rua,
+#cidade,
+#estado {
     border-radius: 20px;
     height: 40px;
-    width:  400px;
+    width: 400px;
     box-shadow: 0px 4px 8px #0005;
     border: 0 none;
     background-color: white;
 }
 
-.cep::placeholder{
+.cep::placeholder {
     padding-left: 15px;
     font-size: 18px;
 }
 
-.buscar{
+.buscar {
     background-color: #007bff;
     width: 100px;
     height: 40px;
@@ -75,53 +78,59 @@ h3{
     cursor: pointer;
 }
 
-.buscar:hover{
+.buscar:hover {
     transform: scale(1.1);
     transition: transform 0.3s ease-in-out;
     background-color: #008fff;
     color: wheat;
 }
 
-.infos{
+.infos {
     height: 50px;
     display: flex;
     flex-direction: column;
 }
 
-input{
+input {
     color: black;
     padding-left: 15px;
     font-size: 18px;
 }
 
-.maps{
+.maps {
     padding-top: 80px;
     padding-left: 90px;
 }
 
 @media (max-width: 768px) {
-    body{
+    body {
         display: flex;
         flex-direction: column;
     }
-    main{
+    main {
         display: flex;
         flex-direction: column;
     }
-    .display{
+    .display {
         gap: 12px;
-        padding-left: 80px;
+        padding-left: 40px;
         width: 600px;
     }
-    iframe{
-        width: 500px;
-        height: 325px;
+    iframe {
+        width: 400px;
+        height: 240px;
     }
-    .azul{
+    .azul {
         padding-top: 10px;
     }
-    .maps{
+    .maps {
         padding-left: 40px;
         padding-top: 40px;
+    }
+    h1 {
+        font-size: 80px;
+    }
+    h3 {
+        font-size: 20px;
     }
 }
