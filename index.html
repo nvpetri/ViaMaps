@@ -6,7 +6,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans:wght@300&display=swap"rel="stylesheet">
-    <script src="app.js" defer></script>
     <link rel="shortcut icon" href="./img/logo.svg" type="image/x-icon">
     <link rel="stylesheet" href="./style.css">
     <title>ViaMaps</title>
@@ -19,12 +18,20 @@
         <div class="display">
             <div class="azul">
                 <h1>ViaMaps</h1>
-                <h3>Insira um CEP para a busca</h3>
+                <h3>Seja Bem-Vindo</h3>
             </div>
             <div class="input">
-                <input type="text" class="cep" id="cep" placeholder="Insira o CEP aqui:">
-                <button class="buscar" id="buscar">BUSCAR</button>
+                <a href="./pagLoc/index.html">
+                    <button class="buscar" id="buscar">OBTER <br> LOCALIZAÇÃO</button>
+                </a>
+                <a href="./pagClima/index.html">
+                    <button class="buscar" id="buscar">OBTER <br> CLIMA</button>
+                </a>
+                <a href="./pagAmbos/index.html">
+                    <button class="buscar" id="buscar">OBTER <br> AMBOS</button>
+                </a>
             </div>
+<<<<<<< HEAD
             <div class="infos">
                 <input type="text" id="rua" disabled>
             </div>
@@ -52,6 +59,8 @@
             <iframe id="iframe" width="1200" height="800" style="border: 10px; border-radius: 50px;" loading="lazy" allowfullscreen
             referrerpolicy="no-referrer-when-downgrade" src="">
         </iframe>
+=======
+>>>>>>> 9c6e9f406d74737d036a3788c8a4f1b34530cfc2
         </div>
     </main>
 </body>

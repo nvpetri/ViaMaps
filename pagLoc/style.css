@@ -11,19 +11,17 @@
 
 body{
     background-color: #e6e6fa;
+    display: flex;
 }
 
 main{
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .display{
     display: flex;
     flex-direction: column;
     gap: 24px;
-    place-items: center;
 }
 
 h1{
@@ -42,26 +40,38 @@ h3{
 
 .azul{
     padding-top: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .input{
     height: 100px;
     display: flex;
+    flex-direction: column;
     gap: 12px;
+}
+
+.cep, #rua, #cidade, #estado{
+    border-radius: 20px;
+    height: 40px;
+    width:  400px;
+    box-shadow: 0px 4px 8px #0005;
+    border: 0 none;
+    background-color: white;
+}
+
+.cep::placeholder{
+    padding-left: 15px;
+    font-size: 18px;
 }
 
 .buscar{
     background-color: #007bff;
-    width: 200px;
-    height: 100px;
+    width: 100px;
+    height: 40px;
     border-radius: 15px;
     border: 0 none;
     box-shadow: 0px 4px 8px #0005;
     color: white;
-    font-size: 24px;
+    font-size: 18px;
     cursor: pointer;
 }
 
@@ -70,6 +80,23 @@ h3{
     transition: transform 0.3s ease-in-out;
     background-color: #008fff;
     color: wheat;
+}
+
+.infos{
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    color: black;
+    padding-left: 15px;
+    font-size: 18px;
+}
+
+.maps{
+    padding-top: 80px;
+    padding-left: 90px;
 }
 
 @media (max-width: 768px) {
@@ -83,59 +110,18 @@ h3{
     }
     .display{
         gap: 12px;
-        padding-left: -80px;
-        width: 100px;
+        padding-left: 80px;
+        width: 600px;
+    }
+    iframe{
+        width: 500px;
+        height: 325px;
     }
     .azul{
         padding-top: 10px;
     }
-    h1{
-        font-size: 70px;
-    }
-    .input{
-        display: flex;
-        flex-direction: column;
+    .maps{
+        padding-left: 40px;
+        padding-top: 40px;
     }
 }
-
-#escolhaOpcao {
-    display: none;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 20px;
-    width: 300px;
-    position: absolute;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  input[type="checkbox"] {
-    margin-right: 5px;
-  }
-  
-  #confirmarOpcao {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-  
-  #confirmarOpcao:hover {
-    background-color: #0056b3;
-  }
-  
-  #confirmarOpcao {
-    margin: 0 auto;
-    display: block;
-  }
